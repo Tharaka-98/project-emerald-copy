@@ -6,7 +6,7 @@ export const loader = () => {
   return { services };
 };
 
-function ContactUs() {
+function Quote() {
   const { services } = useLoaderData();
   const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
     return (
@@ -100,8 +100,8 @@ function ContactUs() {
                   {services.map((service) => {
                     const { id, title } = service;
                     return (
-                      <div className="mt-5 px-[30px] grid grid-cols-2 gap-1 w-full rounded border py-3  text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none bg-[#ecfdf5]">
-                        <div key={id} className="flex items-center  gap-8">
+                      <div key={id} className="mt-5 px-[30px] grid grid-cols-2 gap-1 w-full rounded border py-3  text-base text-body-color outline-none focus:border-primary focus-visible:shadow-none bg-[#ecfdf5]">
+                        <div  className="flex items-center  gap-8">
                           <p>{id}.</p>
                           <p>{title}</p>
                         </div>
@@ -135,4 +135,4 @@ function ContactUs() {
   );
 }
 
-export default ContactUs;
+export default Quote;
